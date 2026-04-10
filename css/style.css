@@ -653,6 +653,10 @@ section + section {
     grid-template-columns: 1fr 1fr;
   }
 
+  .media-row--single {
+    grid-template-columns: 1fr;
+  }
+
   .hero__top {
     flex-direction: column-reverse;
     align-items: flex-start;
