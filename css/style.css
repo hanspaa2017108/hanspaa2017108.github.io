@@ -7,14 +7,15 @@ a{color:var(--dim);text-decoration:none;transition:color .15s}
 a:hover{color:var(--text)}
 img{max-width:100%;display:block}
 
-.nav{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line)}
-.nav__inner{max-width:var(--max-w);margin:0 auto;padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.nav{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line);max-width:var(--max-w);margin:0 auto;padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0 1.25rem}
+.nav__top{display:contents}
 .nav__name{font-weight:600;font-size:.875rem;color:var(--text);text-decoration:none}
-.nav__links{display:flex;align-items:center;gap:1.25rem}
+.nav__actions{display:flex;align-items:center;gap:.75rem;order:3}
+.nav__links{display:flex;align-items:center;gap:1.25rem;order:2}
 .nav__links a{font-size:.8125rem;color:var(--dim);text-decoration:none}
 .nav__links a:hover{color:var(--text)}
-.btn,.nav__links a.btn{padding:.3rem .7rem;font-family:var(--font);font-size:.75rem;font-weight:500;color:var(--bg);background:var(--text);border:none;border-radius:3px;text-decoration:none;cursor:pointer;transition:opacity .15s}
-.btn:hover,.nav__links a.btn:hover{opacity:.8;color:var(--bg)}
+.btn{padding:.3rem .7rem;font-family:var(--font);font-size:.75rem;font-weight:500;color:var(--bg);background:var(--text);border:none;border-radius:3px;text-decoration:none;cursor:pointer;transition:opacity .15s}
+.btn:hover{opacity:.8;color:var(--bg)}
 
 .theme-toggle{background:none;border:none;padding:.25rem;display:inline-flex;align-items:center;cursor:pointer;color:var(--muted);transition:color .15s}
 .theme-toggle:hover{color:var(--text)}
@@ -113,8 +114,7 @@ section+section{border-top:1px solid var(--line)}
   .media-row--single{grid-template-columns:1fr}
   .hero__top{flex-direction:column-reverse;align-items:flex-start;gap:1rem}
   .hero__avatar{width:72px;height:72px}
-  .nav__links{gap:.65rem}
-  .nav__links a{font-size:.75rem}
+  .nav__links{gap:.75rem;order:4;width:100%;padding-top:.5rem}
   .video-embed--ig{max-width:100%}
   .skills-grid{grid-template-columns:1fr;gap:.2rem}
   .footer__inner{flex-direction:column;text-align:center}
