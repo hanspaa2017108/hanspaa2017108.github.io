@@ -89,9 +89,6 @@ section+section{border-top:1px solid var(--line)}
 .reading-list li::before{content:"•";font-size:.6rem;position:absolute;left:0;top:.55em;color:var(--muted)}
 .reading-list a{color:var(--dim);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)}
 .reading-list a:hover{color:var(--text);text-decoration-color:var(--text)}
-.reading-done a{text-decoration:line-through;text-decoration-color:var(--muted);color:var(--muted)}
-.reading-done a:hover{color:var(--dim);text-decoration:line-through}
-.reading-status{font-size:.75rem;color:var(--muted);font-style:italic}
 
 .extras{list-style:none;padding:0;font-size:.875rem;color:var(--dim)}
 .extras li{margin:.3rem 0;padding-left:1rem;position:relative}
