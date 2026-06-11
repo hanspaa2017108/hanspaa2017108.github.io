@@ -1,4 +1,4 @@
-:root{--bg:#fff;--text:#000;--dim:#555;--muted:#999;--line:#ddd;--font:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;--max-w:640px}
+:root{--bg:#fff;--text:#000;--dim:#555;--muted:#999;--line:#ddd;--font:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;--max-w:640px;--nav-w:800px}
 [data-theme="dark"]{--bg:#000;--text:#fff;--dim:#aaa;--muted:#666;--line:#222}
 *,*::before,*::after{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth}
@@ -7,14 +7,15 @@ a{color:var(--dim);text-decoration:none;transition:color .15s}
 a:hover{color:var(--text)}
 img{max-width:100%;display:block}
 
-.nav{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line);max-width:var(--max-w);margin:0 auto;padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0 1.25rem}
+.nav{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line);max-width:var(--nav-w);margin:0 auto;padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:flex-start;flex-wrap:nowrap;gap:.75rem;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.nav::-webkit-scrollbar{display:none}
 .nav__top{display:contents}
-.nav__name{font-weight:600;font-size:.875rem;color:var(--text);text-decoration:none}
-.nav__actions{display:flex;align-items:center;gap:.75rem;order:3}
-.nav__links{display:flex;align-items:center;gap:1.25rem;order:2}
-.nav__links a{font-size:.8125rem;color:var(--dim);text-decoration:none}
+.nav__name{font-weight:600;font-size:.875rem;color:var(--text);text-decoration:none;white-space:nowrap;flex:0 0 auto}
+.nav__actions{display:flex;align-items:center;gap:.55rem;order:3;white-space:nowrap;flex:0 0 auto;margin-left:auto}
+.nav__links{display:flex;align-items:center;gap:.9rem;order:2;white-space:nowrap;flex:0 0 auto}
+.nav__links a{font-size:.8125rem;color:var(--dim);text-decoration:none;white-space:nowrap}
 .nav__links a:hover{color:var(--text)}
-.btn{padding:.3rem .7rem;font-family:var(--font);font-size:.75rem;font-weight:500;color:var(--bg);background:var(--text);border:none;border-radius:3px;text-decoration:none;cursor:pointer;transition:opacity .15s}
+.btn{padding:.3rem .7rem;font-family:var(--font);font-size:.75rem;font-weight:500;color:var(--bg);background:var(--text);border:none;border-radius:3px;text-decoration:none;cursor:pointer;transition:opacity .15s;white-space:nowrap}
 .btn:hover{opacity:.8;color:var(--bg)}
 
 .theme-toggle{background:none;border:none;padding:.25rem;display:inline-flex;align-items:center;cursor:pointer;color:var(--muted);transition:color .15s}
@@ -90,6 +91,11 @@ section+section{border-top:1px solid var(--line)}
 .reading-list a{color:var(--dim);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)}
 .reading-list a:hover{color:var(--text);text-decoration-color:var(--text)}
 
+.writing-card{padding:1rem;border:1px solid var(--line);border-radius:8px;background:color-mix(in srgb,var(--bg) 92%,var(--line))}
+.writing-card__title{font-size:.9375rem;font-weight:600;line-height:1.4}
+.writing-card__title a{color:var(--text);text-decoration:none}
+.writing-card__title a:hover{text-decoration:underline}
+
 .extras{list-style:none;padding:0;font-size:.875rem;color:var(--dim)}
 .extras li{margin:.3rem 0;padding-left:1rem;position:relative}
 .extras li::before{content:"•";font-size:.6rem;position:absolute;left:0;top:.55em;color:var(--muted)}
@@ -114,7 +120,12 @@ section+section{border-top:1px solid var(--line)}
   .media-row--single{grid-template-columns:1fr}
   .hero__top{flex-direction:column-reverse;align-items:flex-start;gap:1rem}
   .hero__avatar{width:72px;height:72px}
-  .nav__links{gap:.75rem;order:4;width:100%;padding-top:.5rem}
+  .nav{padding:.65rem 1rem;gap:.55rem}
+  .nav__links{gap:.7rem}
+  .nav__actions{gap:.45rem;margin-left:0}
+  .nav__name{font-size:.8125rem}
+  .nav__links a{font-size:.75rem}
+  .btn{font-size:.7rem;padding:.25rem .55rem}
   .video-embed--ig{max-width:100%}
   .skills-grid{grid-template-columns:1fr;gap:.2rem}
   .footer__inner{flex-direction:column;text-align:center}
